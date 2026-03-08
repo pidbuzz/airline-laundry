@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airline Laundry Main Menu</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+body{
+  background:url('main menu.jpg') no-repeat center center;
+  background-size:cover;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  color:white;
+  text-shadow:2px 2px 6px rgba(0,0,0,0.7);
+  position:relative;
+}
+
+/* Shared logo styling */
+.logo{
+  position:absolute;
+  object-fit:contain;
+  z-index:2;
+}
+
+/* Buzz logo position */
+.buzz-logo{
+  left:20px;
+  top:20px;
+  height:60px;
+}
+
+/* PID logo position (10% thicker, moved down 2mm previously) */
+.pid-logo{
+  right:20px;
+  left:auto;
+  top:20px;
+  height:63px;
+}
+
+/* Headline section moved up by 1cm (~38px) */
+.headline{
+  margin-top:212px; /* desktop */
+  z-index:2;
+  position:relative;
+}
+
+.headline h1{
+  font-size:3.25rem; /* increased ~3pt */
+  margin-bottom:15px;
+}
+
+.headline p{
+  font-size:1.55rem; /* increased ~3pt */
+  margin-bottom:50px;
+}
+
+/* Buttons */
+.button-container{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+  z-index:2;
+  position:relative;
+}
+
+.btn{
+  padding:18px 40px;
+  font-size:1.4rem;
+  color:white;
+  background:linear-gradient(to right,#FF7E5F,#FF4500);
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  text-decoration:none;
+  box-shadow:0 6px 15px rgba(0,0,0,0.3);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Tablet */
+@media (max-width:768px){
+
+  .logo{
+    height:50px;
+  }
+
+  .pid-logo{
+    right:15px;
+    left:auto;
+    top:19px;
+    height:52px;
+  }
+
+  .headline{
+    margin-top:162px; /* moved up by 1cm */
+  }
+
+  .headline h1{
+    font-size:2.35rem; /* increased ~3pt */
+  }
+
+  .headline p{
+    font-size:1.25rem; /* increased ~3pt */
+  }
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+  .logo{
+    height:40px;
+  }
+
+  .pid-logo{
+    right:10px;
+    left:auto;
+    top:17px;
+    height:42px;
+  }
+
+  .headline{
+    margin-top:112px; /* moved up by 1cm */
+  }
+
+  .headline h1{
+    font-size:1.95rem; /* increased ~3pt */
+  }
+
+  .headline p{
+    font-size:1.08rem; /* increased ~3pt */
+  }
+
+  .btn{
+    width:80%;
+    font-size:1.2rem;
+    padding:12px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Buzz logo -->
+<img src="buzz.png" class="logo buzz-logo" alt="Buzz Logo">
+
+<!-- PID logo -->
+<img src="PID.png" class="logo pid-logo" alt="PID Logo">
+
+<!-- Headline -->
+<div class="headline">
+<h1>Airline Laundry</h1>
+<p>Manage your airline laundry and track assets in real-time</p>
+</div>
+
+<!-- Buttons -->
+<div class="button-container">
+  <a class="btn" href="dashboard.html">Dashboard</a>
+  <a class="btn" href="https://pid.rfiddiscovery.net/assetlist" target="_blank">Tracking</a>
+</div>
+
+</body>
+</html>
