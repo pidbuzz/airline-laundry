@@ -25,6 +25,7 @@ body{
   background-size:cover;
   display:flex;
   flex-direction:column;
+  align-items:center;
   text-align:center;
   color:white;
   text-shadow:2px 2px 6px rgba(0,0,0,0.7);
@@ -45,29 +46,33 @@ body{
   height:60px;
 }
 
-/* PID logo position (10% thicker, moved down 2mm previously) */
+/* PID logo position */
 .pid-logo{
   right:20px;
-  left:auto;
   top:20px;
   height:63px;
 }
 
-/* Headline section moved up by 1cm (~38px) */
-.headline{
-  margin-top:212px; /* desktop */
+/* Glass panel container */
+.panel{
+  margin-top:250px;
+  padding:50px 70px;
+  border-radius:18px;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
   z-index:2;
-  position:relative;
 }
 
+/* Headline */
 .headline h1{
-  font-size:3.25rem; /* increased ~3pt */
+  font-size:3.25rem;
   margin-bottom:15px;
 }
 
 .headline p{
-  font-size:1.55rem; /* increased ~3pt */
-  margin-bottom:50px;
+  font-size:1.55rem;
+  margin-bottom:40px;
 }
 
 /* Buttons */
@@ -76,8 +81,6 @@ body{
   gap:30px;
   flex-wrap:wrap;
   justify-content:center;
-  z-index:2;
-  position:relative;
 }
 
 .btn{
@@ -107,21 +110,21 @@ body{
 
   .pid-logo{
     right:15px;
-    left:auto;
     top:19px;
     height:52px;
   }
 
-  .headline{
-    margin-top:162px; /* moved up by 1cm */
+  .panel{
+    margin-top:200px;
+    padding:40px;
   }
 
   .headline h1{
-    font-size:2.35rem; /* increased ~3pt */
+    font-size:2.35rem;
   }
 
   .headline p{
-    font-size:1.25rem; /* increased ~3pt */
+    font-size:1.25rem;
   }
 
 }
@@ -135,21 +138,22 @@ body{
 
   .pid-logo{
     right:10px;
-    left:auto;
     top:17px;
     height:42px;
   }
 
-  .headline{
-    margin-top:112px; /* moved up by 1cm */
+  .panel{
+    margin-top:150px;
+    padding:30px;
+    width:85%;
   }
 
   .headline h1{
-    font-size:1.95rem; /* increased ~3pt */
+    font-size:1.95rem;
   }
 
   .headline p{
-    font-size:1.08rem; /* increased ~3pt */
+    font-size:1.08rem;
   }
 
   .btn{
@@ -171,16 +175,19 @@ body{
 <!-- PID logo -->
 <img src="PID.png" class="logo pid-logo" alt="PID Logo">
 
-<!-- Headline -->
+<!-- Glass Panel -->
+<div class="panel">
+
 <div class="headline">
-<h1>Airline Laundry</h1>
-<p>Manage your airline laundry and track assets in real-time</p>
+<h1>Airline Laundry Management</h1>
+<p>Effortlessly track, monitor, and optimise airline laundry assets in real time.</p>
 </div>
 
-<!-- Buttons -->
 <div class="button-container">
   <a class="btn" href="dashboard.html">Dashboard</a>
   <a class="btn" href="https://pid.rfiddiscovery.net/assetlist" target="_blank">Tracking</a>
+</div>
+
 </div>
 
 </body>
